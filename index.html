@@ -1,58 +1,285 @@
+<!doctype html>
+<html lang="en">
 
-<!DOCTYPE html>
-<html>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <head>
-	<title>Invesment Calculator</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-</head>
-<body>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>Invesment Trade Calculator</title>
+
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png" />
+	<link rel="icon" type="image/png" href="assets/img/favicon.png" />
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+	<!-- Canonical SEO -->
+    <link rel="canonical" href=""/>
+
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="">
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:creator" content="">
+    <meta name="twitter:image" content="">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="" />
+
+	<!--     Fonts and icons     -->
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+	<link rel="stylesheet" href="maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+
+	<!-- CSS Files -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="assets/css/material-bootstrap-wizard.css" rel="stylesheet" />
+
+	<!-- CSS Just for demo purpose, don't include it in your project -->
+	<link href="assets/css/demo.css" rel="stylesheet" />
+
+	<style>
+		.gray{
+			background-color:#333;
+		}
+		.roi{
+			color:#f44336;
+			border:solid  #f44336 1px;
+		}
+		.finish{
+			color:#9c27b0;
+			border:solid #9c27b0 1px;
+		}
+		.lightgray{
+			background-color:#00bcd4;
+		}
+		.lot{
+			font-style: italic;
+		}
+	</style>
+	<!-- Google Tag Manager -->
+
+	<!-- End Google Tag Manager -->
+	</head>
+
+	<body>
+
+	<div class="image-container set-full-height" style="background-image: url('https://images.unsplash.com/photo-1522244726599-e74ba32ba0a8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')">
+	    <!--   Creative Tim Branding   -->
+	    <a href="https://github.com/ahendroo1">
+	         <div class="logo-container">
+	            <div class="logo">
+	                <img src="https://avatars3.githubusercontent.com/u/24790171?s=460&v=4">
+	            </div>
+	            <div class="brand">
+	               Amad Hendro
+	            </div>
+	        </div>
+	    </a>
+
+		<!--  Made With Material Kit  -->
+		<a href="https://github.com/ahendroo1" class="made-with-mk">
+			<div class="brand">AH</div>
+			<div class="made-with">Made with <strong> AhendroO </strong></div>
+		</a>
+
+	    <!--   Big container   -->
+	    <div class="container">
+	        <div class="row">
+		        <div class="col-sm-12">
+		            <!--      Wizard container        -->
+		            <div class="wizard-container">
+		                <div class="card wizard-card" data-color="red" id="wizard">
+		                    <form action="#" method="">
+		                <!--        You can switch " data-color="blue" "  with one of the next bright colors: "green", "orange", "red", "purple"             -->
+
+		                    	<div class="wizard-header">
+		                        	<h3 class="wizard-title">
+		                        		Invesment Calculator
+		                        	</h3>
+									<h5>This information Invesment.</h5>
+		                    	</div>
+								<div class="wizard-navigation">
+									<ul>
+			                            <li><a href="#calculate" data-toggle="tab">Calculate</a></li>
+			                            <li><a href="#future_" data-toggle="tab">Future</a></li>
+			                        </ul>
+								</div>
+
+		                        <div class="tab-content">
+		                            <div class="tab-pane" id="calculate">
+		                            	<div class="row">
+			                            	<div class="col-sm-12">
+			                                	<h4 class="info-text"> <b>Let's start with my Calculator.</b></h4>
+			                            	</div>
+		                                	<div class="col-sm-6">
+												<div class="input-group">
+													<span class="input-group-addon">
+														<i class="fa fa-dollar"></i>
+													</span>
+													<div class="form-group label-floating">
+			                                          	<label class="control-label">Investment Amount </label>
+			                                          	<input type="number" class="form-control" id="amount">
+			                                        </div>
+												</div>
+
+												<div class="input-group">
+													<span class="input-group-addon">
+														<i class="fa fa-calendar"></i>
+													</span>
+													<div class="form-group label-floating">
+			                                          	<label class="control-label">Period Year</label>
+			                                          	<input type="number" id="period" onkeyup="numbers_only(this)" class="form-control">
+			                                        </div>
+												</div>
+
+		                                	</div>
+		                                	<div class="col-sm-6">
+
+		                                    	<div class="input-group">
+													<span class="input-group-addon">
+														<i class="fa fa-percent"></i>
+													</span>
+													<div class="form-group label-floating">
+														<label class="control-label">Monthly Expected Return</label>
+			                                          	<input type="number" class="form-control"  id="expect" onkeypress="return isNumberKey(event)" onblur="validDecimal(this)">
+			                                        </div>
+												</div>
+
+		                                	</div>
+		                            	</div>
+		                            </div>
+		                            <div class="tab-pane" id="future_">
+										<h3 class="info-text"> <b>Invesment data information </b> </h3>
+										<h5 class="info-text" style="margin-bottom:0px">
+											<b class="text-dark">Future Value </b> 
+										</h5>
+											
+										<h5 class="info-text" id="future" > </h5> 
+
+										
+		                                <div class="row">
+		                                    <div class="col-sm-10 col-sm-offset-1 table-responsive">
+		                                       			
+												<table class="future table table-striped "cellspacing="0" cellpadding="7">
+													<tbody>
+													</tbody>
+												</table>
+												
+		                                    </div>
+		                                </div>
+		                            </div>
+		                           
+		                        </div>
+	                        	<div class="wizard-footer">
+	                            	<div class="pull-right">
+	                                    <input type='button' class='btn btn-next btn-fill btn-danger btn-wd' onclick="calculate()"  value='Calculate' />
+	                                    <input type='button' class='btn btn-previous btn-fill btn-danger btn-wd' onclick="reset()" value='Reset' />
+	                                </div>
+	                                <div class="pull-left">
+	                                    <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Previous' />
+
+										<!-- <div class="footer-checkbox">
+											<div class="col-sm-12">
+											  <div class="checkbox">
+												  <label>
+													  <input type="checkbox" name="optionsCheckboxes">
+												  </label>
+												  Subscribe to our newsletter
+											  </div>
+										  </div>
+										</div> -->
+	                                </div>
+	                                <div class="clearfix"></div>
+	                        	</div>
+		                    </form>
+		                </div>
+		            </div> <!-- wizard container -->
+		        </div>
+	    	</div> <!-- row -->
+		</div> <!--  big container -->
+
+	    <div class="footer">
+	        <div class="container text-center">
+	             Made with by <i class="fa fa-github "></i> <a href="https://www.github.com/ahendroo1/"> Ahendroo1 </a>.  
+	        </div>
+	    </div>
+
+		<div class="fixed-plugin">
+			<div class="dropdown open">
+				<a href="#" data-toggle="dropdown">
+					<i class="fa fa-cog fa-2x"> </i>
+				</a>
+				<ul class="dropdown-menu">
+					<li class="header-title">Information</li>
+					<li class="active">
+						<a href="#">
+
+						   Invesment
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						   Build Your Profile
+						</a>
+					</li>
+
+					<li class="header-title">Colors</li>
+					<li class="adjustments-line">
+						<a href="javascript:void(0)" class="switch-trigger">
+							<div class="text-center">
+								<span class="badge filter badge-blue" data-color="blue"></span>
+								<span class="badge filter badge-purple" data-color="purple"></span>
+								<span class="badge filter badge-green" data-color="green"></span>
+								<span class="badge filter badge-orange" data-color="orange"></span>
+								<span class="badge filter badge-red  active" data-color="red"></span>
+							</div>
+							<div class="clearfix"></div>
+						</a>
+					</li>
+				   <li class="tutorial">
+						<div class="text-center">
+							<a href="documentation.html" target="_blank" class="btn btn-default btn-fill btn-block">Documentation</a>
+						</div>
+					</li>
+					<li class="license">
+						  Personal License
+						<div class="text-center">
+							<a href="https://github.com/ahendroo1/investment_calculator" target="_blank" class="btn btn-info btn-fill btn-block"> <i class="fa fa-github"></i> Download, it's free Code!</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
 
 </body>
+	<!--   Core JS Files   -->
+	<script src="assets/js/jquery-2.2.4.min.js" type="text/javascript"></script>
+	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="assets/js/jquery.bootstrap.js" type="text/javascript"></script>
+
+	<!--  Plugin for the Wizard -->
+	<script src="assets/js/demo.js" type="text/javascript"></script>
+	<script src="assets/js/material-bootstrap-wizard.js" type="text/javascript"></script>
+
+	<!--  More information about jquery.validate here: https://jqueryvalidation.org/	 -->
+	<script src="assets/js/jquery.validate.min.js" type="text/javascript"></script>
+	<script src="assets/js/calculator.js" type="text/javascript"></script>
+
+
 </html>
-
-
-<style type="text/css">
-	html {
-	  font-family: 'Arial';
-	}
-
-	#error {
-	  color: red;
-	  display: none;
-	}
-
-	#money_in_the_bank {
-	  font-size: 48px;
-	}
-</style>
-
-<form>
-	<p>Investment Amount</p>
-	
-	  <input id="money" type="number" placeholder="Investment Amount" onkeyup="calculate()" value="100" />
-	  <br>
-	  <p> years : <span id="years_text"></span></p>
-	  
-	  <input id="years" type="range" min="1" max="100" value="1" onmousemove="calculate()" onkeydown="calculate()" />
-
-	  	  <hr>
-	  <div id="error">...</div>
-
-	  <div id="money_in"></div>
-</form>
-
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-<script type="text/javascript">
-	
-	function calculate () {
-	  var money = parseInt($('input#money').val());
-	  var years = parseInt($('input#years').val());
-	  var total = money * Math.pow(1.1, years);
-
-		$('#years_text').text(years);
-	$('#money_in').text(Math.floor(total));
-}
-</script>
