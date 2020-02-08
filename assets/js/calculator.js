@@ -80,6 +80,10 @@
 	}
 	
 	function reset(){
+		jQuery("#period").val("");
+		jQuery("#amount").val("");
+		jQuery("#amount").focus();
+		jQuery("#expect").val("");
 		jQuery("#future").text("");
         jQuery(".futured").hide();
 	}
