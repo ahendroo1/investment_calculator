@@ -327,14 +327,6 @@
 	}
 	jQuery(function() {
 		
-		var url = "http://localhost/112/index.php" ;
-		console.log(window.location.href)
-		console.log(url)
-
-		if(window.location.href === url){
-			console.log(1);
-			JQuery("#calculatorInvesment").show();
-		}
 
 		
 		convertCurr('amount');
@@ -361,5 +353,14 @@
 		jQuery("#form2").submit(function(){
 			jQuery("table.future tbody").empty();
 			calculate2nd();
-		});	
+		});
 	});
+	
+	var url = "http://localhost/112/index.php" ;
+	console.log(window.location.href)
+	console.log(url)
+
+	if(window.location.href === url){
+		console.log(1);
+		JQuery("#calculatorInvesment").show();
+	}
