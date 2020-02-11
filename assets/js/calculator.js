@@ -327,8 +327,6 @@
 	}
 	jQuery(function() {
 		
-
-		
 		convertCurr('amount');
 		convertCurr('amount2');
 		convertCurr('future',0);
@@ -355,4 +353,3 @@
 			calculate2nd();
 		});
 	});
-	
