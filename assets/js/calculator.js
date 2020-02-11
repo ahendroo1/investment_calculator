@@ -326,6 +326,15 @@
 		jQuery(".future").show();
 	}
 	jQuery(function() {
+
+		jQuery("#calculatorInvesment").hide()
+		var url = "http://localhost/112/index.php" ;
+		// console.log(window.location.href)
+		// console.log(url)
+
+		if(window.location.href === url){
+			jQuery("#calculatorInvesment").show()
+		}
 		
 		convertCurr('amount');
 		convertCurr('amount2');
