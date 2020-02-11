@@ -332,8 +332,8 @@
 		console.log(url)
 
 		if(window.location.href === url){
-			console.log(1)
-			JQuery(".calculatorInvesment").show()
+			console.log(1);
+			JQuery("#calculatorInvesment").show();
 		}
 
 		
