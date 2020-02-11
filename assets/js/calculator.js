@@ -356,11 +356,3 @@
 		});
 	});
 	
-	var url = "http://localhost/112/index.php" ;
-	console.log(window.location.href)
-	console.log(url)
-
-	if(window.location.href === url){
-		console.log(1);
-		JQuery("#calculatorInvesment").show();
-	}
