@@ -333,7 +333,7 @@
 
 		if(window.location.href === url){
 			console.log(1)
-			// $(".calculatorInvesment").show()
+			JQuery(".calculatorInvesment").show()
 		}
 
 		
