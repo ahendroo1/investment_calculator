@@ -351,5 +351,5 @@
 		jQuery("#form2").submit(function(){
 			jQuery("table.future tbody").empty();
 			calculate2nd();
-		});	
+		});
 	});
