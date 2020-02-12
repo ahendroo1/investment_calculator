@@ -16,12 +16,12 @@
 
 				var rss = '' ;
 				for (var i = 0 ; 5 > i; i++) {
-					rss  += '<h4 style="margin-bottom:5px;"><b>'+data.items[i].title+'</b></h4><small>'+data.items[i].pubDate+'</small><br><small>'+data.items[i].author+ '</small>	<br> <p>'+data.items[i].description.slice(0, 200);+'</p>  '
+					rss  += '<a href="'+data.items[i].link+'" target="_blank"> </a> <h4 style="margin-bottom:5px;"><b>'+data.items[i].title+'</b></h4><small>'+data.items[i].pubDate+'</small><br><small>'+data.items[i].author+ '</small>	<br> <p>'+data.items[i].description.slice(0, 200);+'</p>  '
 					
 				}
 					$('#results').html(rss)	
 
-				// console.log(data)
+				// console.log(data)git 
 			});
 
 		});
