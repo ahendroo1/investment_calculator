@@ -15,7 +15,7 @@
 
 				var rss = '' ;
 				for (var i = 0 ; 5 > i; i++) {
-					rss  += '<a href="'+data.items[i].link+'" target="_blank"> <h4 style="margin-bottom:5px;"><b>'+data.items[i].title+'</b></h4><small>'+data.items[i].pubDate+'</small><br><small>'+data.items[i].author+ '</small>	 </a><br> <p>'+data.items[i].description.slice(0, 200);+'</p>  '
+					rss  += '<a href="'+data.items[i].link+'" style="color:black:text-decoration:none;" target="_blank"> <h4 style="margin-bottom:5px;"><b>'+data.items[i].title+'</b></h4><small>'+data.items[i].pubDate+'</small><br><small>'+data.items[i].author+ '</small>	 </a><br> <p>'+data.items[i].description.slice(0, 200);+'</p>  '
 					
 				}
 					$('#results').html(rss)	
