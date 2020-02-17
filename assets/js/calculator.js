@@ -80,8 +80,12 @@
 	}
 	
 	function reset(){
-		jQuery("#future").val("");
-        jQuery(".future").hide();
+		jQuery("#period").val("");
+		jQuery("#amount").val("");
+		jQuery("#amount").focus();
+		jQuery("#expect").val("");
+		jQuery("#future").text("");
+        jQuery(".futured").hide();
 	}
 
 	Number.prototype.formatMoney = function(c, d, t){
@@ -116,7 +120,7 @@
 		}
 
 		jQuery("#future").text(usd + ' USD');
-
+        jQuery(".futured").show();
 
 		jQuery("table.future tbody").html("<tr><th colspan='2'>Year/Month</th><th>Jan</th><th>Feb</th><th>Mar</th><th>Apr</th><th>Mei</th><th>Jun</th><th>Jul</th><th>Aug</th><th>Sep</th><th>Oct</th><th>Nov</th><th>Dec</th><th>Net<br>Profit</th></tr>");
 		j = 0;
@@ -347,5 +351,5 @@
 		jQuery("#form2").submit(function(){
 			jQuery("table.future tbody").empty();
 			calculate2nd();
-		});	
+		});
 	});
