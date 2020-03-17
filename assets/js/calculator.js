@@ -352,4 +352,34 @@
 			jQuery("table.future tbody").empty();
 			calculate2nd();
 		});
+		$('a[href="/index.php?misc/language"]').each(function(){ 
+        
+			var lang = $(this).text().trim();
+			if(lang === "Bahasa"){
+				$('.invesment-calculator-title').text('Kalkulator Investasi');
+				$(".p-footer-row-opposite ul li:nth-child(1) a").text('Beranda');
+				$(".p-footer-row-opposite ul li:nth-child(2) a").text('Forum');
+				$(".p-footer-row-opposite ul li:nth-child(3) a").text('Berita');
+				$(".p-footer-row-opposite ul li:nth-child(4) a").text('Kalender');
+				$(".p-footer-row-opposite ul li:nth-child(5) a").text('Rekomendasi (VIP)');
+				$(".p-footer-row-opposite ul li:nth-child(5) a").text('Rekomendasi (VIP)');
+				$("#invesment_amount_label").text("Jumlah Investasi");
+				$("#period_label").text("Lama waktu");
+				$("#monthly_label").text("Jumlah keuntungan yang diharapkan per bulan").css("font-size", "10px");
+				$('.resets-btn').text("Atur ulang");
+				$(".calculate-btn").text("Hitung");
+				if(window.location.href === "http://traderhub.id/index.php?pages/invesment_calculator/"){
+	
+					$(".p-title-value").text("Kalkulator Investasi");
+				}
+				if(window.location.href === "http://traderhub.id/index.php?pages/calendar/"){
+	
+					$(".p-title-value").text("Kalender");
+				}
+	
+				if(window.location.href === "http://traderhub.id/index.php?forums/"){
+					$('a[href="/index.php?forums/#vip-members-only.10').text("Khusus VIP");
+				}
+			}
+		});
 	});
