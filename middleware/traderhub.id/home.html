@@ -1,0 +1,138 @@
+<xf:h1 hidden="true" />
+<xf:widget key="rss_feed"  />
+<xf:widget key="rss_feed1" position="sidebar" />
+<xf:widget key="html"  />
+<xf:widget key="nw"  />
+<xf:widget key="hotest_thread"   />
+<xf:widget key="latest_reply" position="sidebar" />
+<xf:widget key="new_promotions" position="sidebar" />
+<xf:widget key="knowledge_corner"  />
+<xf:widget key="trading_corner" />
+<xf:widget key="FAQ" position="sidebar" />
+
+
+<xf:css>
+	@media (max-width: 900px){
+	.p-body-main, .p-body-content {
+    display: inline;
+		} 
+	}
+		.block-body:nth-child(1) {
+			
+			background-color:#ececec;
+			padding-top:0px;
+			padding-left:0px;
+			padding-right:0px;
+		}
+	.p-body-content{
+		margin-left:0px;
+		margin-right:0px;
+	}
+	
+	
+.p-breadcrumbs {
+display:none
+}
+
+.shareButtons-label {
+    display: none;
+    }
+    
+.shareButtons--iconic .shareButtons-buttons {
+    display: none;
+    }
+	
+	.shareButtons shareButtons--iconic {
+		display:none;
+	}
+	
+	
+	
+		@media (max-width: 900px){
+			.p-body-sidebar {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: stretch;
+				margin: 0px 10px 0px;
+				width: auto;
+			}
+		}
+
+		@media (max-width: 900px){
+			.p-body-sidebar {
+				display: inline;
+				flex-wrap: wrap;
+				align-items: stretch;
+				margin: 0px 10px 0px;
+				width: 100%;
+			}
+		}
+</xf:css>
+
+<script
+	src="https://code.jquery.com/jquery-3.4.1.js"
+	integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+	crossorigin="anonymous"></script>
+<xf:js>
+	
+	
+	$(document).ready(function(){
+        
+    
+
+		
+        $('a[href="/forums/-/trading-recommendation.7/"]').each(function(){ 
+           
+            var oldUrl = $(this).attr("href"); // Get current url
+            var newUrl = oldUrl.replace("/forums/-/trading-recommendation.7/", "/forums/trading-recommendation.7/"); // Create new url
+            $(this).attr("href", newUrl); // Set herf value
+        });
+
+		
+		$('a[href="/whats-new/posts/?skip=1"]').eq(0).each(function(){ 
+            var HottestUrl = $(this).attr("href"); // Get current url
+            var newHTUrl = HottestUrl.replace("/whats-new/posts/?skip=1", "#"); // Create new url
+            $(this).attr("href", newHTUrl); // Set herf value
+        });
+        
+         $('a[href="/whats-new/posts/?skip=1"]').eq(1).each(function(){ 
+             var LRUrl = $(this).attr("href"); // Get current url
+             var newLRUrl = LRUrl.replace("/whats-new/posts/?skip=1", "#"); // Create new url
+             $(this).attr("href", newLRUrl); // Set herf value
+         });
+		  $('a[href="/whats-new/posts/?skip=1"]').eq(2).each(function(){ 
+             var LAUrl = $(this).attr("href"); // Get current url
+             var newLAUrl = LAUrl.replace("/whats-new/posts/?skip=1", "/forums/frequent-questions.6/"); // Create new url
+             $(this).attr("href", newLAUrl); // Set herf value
+         });
+         
+            $('a[href="/whats-new/"]').each(function(){ 
+                var knowledgeUrl = $(this).attr("href"); // Get current url
+                var newknowledgeUrl = knowledgeUrl.replace("/whats-new/", "http://traderhub.id/forums/investment-corner.2/"); // Create new url
+                $(this).attr("href", newknowledgeUrl); // Set herf value
+            });
+		 
+		 
+		  $('a[href="/whats-new/posts/?skip=1"]').eq(0).each(function(){ 
+            var TUrl = $(this).attr("href"); // Get current url
+            var newTUrl = TUrl.replace("/whats-new/posts/?skip=1", "/forums/trading-corner.4/"); // Create new url
+            $(this).attr("href", newTUrl); // Set herf value
+         });
+         $('a[href="/whats-new/posts/?skip=1"]').eq(0).each(function(){ 
+            var VUrl = $(this).attr("href"); // Get current url
+            var newVUrl = VUrl.replace("/whats-new/posts/?skip=1", "#"); // Create new url
+            $(this).attr("href", newVUrl); // Set herf value
+         });
+		
+		
+		$('a[href="/whats-new/posts/?skip=1"]').eq(0).each(function(){ 
+            var FQUrl = $(this).attr("href"); // Get current url
+            var newFQUrl = FQUrl.replace("/whats-new/posts/?skip=1", "/forums/frequent-questions.6/"); // Create new url
+            $(this).attr("href", newFQUrl); // Set herf value
+        });
+	
+	
+	
+	});
+	
+</xf:js>
